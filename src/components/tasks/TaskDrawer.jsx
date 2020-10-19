@@ -75,12 +75,12 @@ const TaskDrawer = (props) => {
         validationSchema: Yup.object({
             name: Yup.string()
                 .min(6, 'Must be minimum 6 characters')
+                .matches(/^[A-Za-z\s]+$/, 'Only letters allowed.')
                 .required('Required'),
         }),
         onSubmit: async (values, { resetForm }) => {
             values.files = fileState
             values.id = item.id ? item.id : uuidv4()
-            console.log(values)
             props.createTasks(values, item.id)
             await resetForm()
             props.clearItem()

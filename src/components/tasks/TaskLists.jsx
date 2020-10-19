@@ -33,9 +33,8 @@ const TaskLists = (props) => {
     const [ items, setItems ] = useState([])
     const [ filter, setFilter ] = useState('all')
     const filterTask = (type) => {
-        console.log(type,tasks)
         if(type === "active")
-        setItems(tasks.filter(d=> { console.log(d);
+        setItems(tasks.filter(d=> { 
            return d.isComplete===0
         }))
         else if(type==="complete")

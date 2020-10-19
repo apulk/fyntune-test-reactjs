@@ -51,7 +51,6 @@ const Dashboard = (props) => {
   };
   // Craete task data 
   const createTask = (values) => {
-    console.log(values)
     setItem({
       id: values.id ? values.id : null,
       name: values?.name || '',
