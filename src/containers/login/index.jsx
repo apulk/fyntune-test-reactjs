@@ -122,14 +122,7 @@ const Login = (props) => {
               <div className="error" color="danger">{err}</div>
             </Grid>
           </Grid>
-          <Grid container >
-            
-            <Grid item>
-              <Link to="/register" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
+           
         </form>
       </div>
       <Box mt={8}>
